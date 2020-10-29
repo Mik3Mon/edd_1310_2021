@@ -1,4 +1,4 @@
-from arrays import Array
+from Arrays import Array
 
 algo = Array(10)
 print(algo.get_item(6363))
