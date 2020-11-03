@@ -1,15 +1,9 @@
-from Arrays import Array
+from Empleados import Empleados
+arch = open("junio.txt","rt")
+dat = 'dato'
+while(dat != ('')):
+    dat = arch.readline()
+    print(dat)
 
-algo = Array(10)
-print(algo.get_item(6363))
-algo.set_item(555,3)
-print(algo.get_item(3))
-print(f"El arreglo tiene {algo.get_length()} elementos")
-algo.clear(777)
-print(algo.get_item(3))
-print("------------------")
-print("Aqui empieza mi prueba del iterador")
-for x in algo:
-    print(x)
-for x in range(algo.get_length()):
-    print(f"{x}->{algo.get_item(x)}")
+em_1 = Empleados("317182260","Miguel","Monzon","Lucero","15","13000","2019")
+print(em_1.to_string())
