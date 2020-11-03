@@ -9,4 +9,4 @@ class Empleados:
         self.__aniodeIngreso = a
 
     def to_string( self ):
-        return "Numero de trabajdor:"+self.__numerodeTrabajador+" Nombres:"+self.__nombre+" Appelido Paterno:"+self.__apellidoPaterno+" Apellido Materno:"+self.__apellidoMaterno+" Horas Extra:"+self.__horasExtras+" Sueldo Base:"+self.__sueldoBase+"Año de Ingreso:"+self.__aniodeIngreso
+        return "Numero de trabajdor:"+self.__numerodeTrabajador+" Nombres:"+self.__nombre+" Appelido Paterno:"+self.__apellidoPaterno+" Apellido Materno:"+self.__apellidoMaterno+" Horas Extra:"+self.__horasExtras+" horas"+" Sueldo Base:"+self.__sueldoBase+" pesos"+" Año de Ingreso:"+self.__aniodeIngreso
