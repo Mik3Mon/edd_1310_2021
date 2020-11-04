@@ -1,6 +1,6 @@
 class Empleados:
-    def __init__( self , nt , n , ap , am , x , s , a):
-        self.__numerodeTrabajador = nt
+    def __init__( self , ndt , n , ap , am , x , s , a):
+        self.__numerodeTrabajador = ndt
         self.__nombre = n
         self.__apellidoPaterno = ap
         self.__apellidoMaterno = am
