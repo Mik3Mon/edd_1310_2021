@@ -1,4 +1,4 @@
-class Empleados:
+class Empleado:
     def __init__( self , ndt , n , ap , am , x , s , a):
         self.__numerodeTrabajador = ndt
         self.__nombre = n

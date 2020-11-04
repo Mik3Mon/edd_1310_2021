@@ -1,9 +1,9 @@
-from Empleados import Empleados
+from Empleados import Empleado
 from Arrays import Array
 
 arch = open("junio.txt","rt")
-dat = 'ddd'
+datos = 'dato'
 
-while(dat != ('')):
-    dat = arch.readline()
-    dat_2 = dat.strip().split(',')
+while(datos != ('')):
+    datos = arch.readline()
+    empleados = datos.strip().split(',')
