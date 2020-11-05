@@ -1,6 +1,6 @@
 from Arrays import Array
 
-arch = open("junio.txt","r")
+arch = open("junio.dat","rt")
 Empleado = arch.readlines()
 Empleado = [ e.replace('','').strip().split(',') for e in Empleado ]
 lista = len(Empleado)
