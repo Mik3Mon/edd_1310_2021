@@ -59,3 +59,21 @@ a.show()
 #Ejemplo 9
 a.get_siguiente().get_siguiente().get_siguiente().set_siguiente(None)
 a.show()
+
+print("\nSegunda parte")
+class Nodo2:
+    def __init__(self , dato):
+        self.dato = dato
+        self.siguiente = None
+
+#Ejemplo 1
+a = Nodo2(10)
+print(a.dato)
+print(a.siguiente)
+
+#Corrido Transversal
+curr_node2 = a
+print(curr_node2.dato , "--->" , end = "")
+    curr_node2 = curr_node2.siguiente
+    print(curr_node2.dato , "--->" , end = "")
+    print("")
