@@ -5,9 +5,9 @@ class Generacion:
     celula_muerta = 0
 
     def __init__(self , rens , cols , generacion , poblacion):
-        self.alto = rens
+        self.largo = rens
         self.ancho = cols
-        self.grid = Array2D(self.alto , self.ancho , 0)
+        self.grid = Array2D(self.largo , self.ancho , 0)
         self.generacion = generacion
 
         for celula in poblacion:
@@ -17,7 +17,7 @@ class Generacion:
         return self.generacion
 
     def get_num_rens(self):
-        return self.alto
+        return self.largo
 
     def get_num_cols(self):
         return self.ancho
@@ -43,15 +43,15 @@ class Generacion:
         for r in range(self.grid.get_num_rens()):
             for c in range(self.grid.get_num_cols()):
                 if self.grid.get_item(r, c) == 0:
-                    print("0 ", end = "")
+                    print("0 " , end = "")
                 else:
-                    print("1 ", end = "")
+                    print("1 " , end = "")
             print("")
 
     def get_numero_vecinos_vivos(self , ren , col):
         limites = [ren-1 , ren+1 , col-1 , col+1]
         vivos = 0
-        if ren >= 0 and ren <= self.alto-1 and col >= 0 and col <= self.ancho -1:
+        if ren >= 0 and ren <= self.largo-1 and col >= 0 and col <= self.ancho -1:
             for r in range(limites[0], limites[1]+1):
                 for c in range(limites[2], limites[3]+1):
                     if r == self.get_num_rens():
