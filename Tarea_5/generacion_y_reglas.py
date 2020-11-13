@@ -51,6 +51,7 @@ class Generacion:
     def get_numero_vecinos_vivos(self , ren , col):
         limites = [ren-1 , ren+1 , col-1 , col+1]
         vivos = 0
+
         if ren >= 0 and ren <= self.largo-1 and col >= 0 and col <= self.ancho -1:
             for r in range(limites[0], limites[1]+1):
                 for c in range(limites[2], limites[3]+1):
@@ -60,18 +61,22 @@ class Generacion:
                         c = 0
                     if self.get_celula_viva(r, c):
                         vivos += 1
-        else :
+        else:
             print("Coordenada de la celula fuera del grid")
+
         if self.get_celula_viva(ren, col):
             vivos -= 1
         return (vivos)
 
     def reglas_evolutivas(self):
         lista2 = []
+        
         for r in range( self.grid.get_num_rens()):
             lista_r = []
+
             for c in range( self.grid.get_num_cols()):
                 lista_r.append(self.grid.get_item(r, c))
+
             lista2.append(lista_r)
 
         for ren in range(self.grid.get_num_rens()):
