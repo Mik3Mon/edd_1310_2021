@@ -70,7 +70,7 @@ class Generacion:
 
     def reglas_evolutivas(self):
         lista2 = []
-        
+
         for r in range( self.grid.get_num_rens()):
             lista_r = []
 
