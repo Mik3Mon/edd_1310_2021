@@ -9,7 +9,7 @@ class Array2D:
         print("")
         for ren in self.__array:
             print(ren)
-        [print("---",end="") for x in range(self.__cols)]
+        [print("---",end = "") for x in range(self.__cols)]
         print("")
 
     def get_num_rens(self):
