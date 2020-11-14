@@ -2,9 +2,7 @@ from generacion_y_reglas import Generacion
 
 ejemplo = Generacion(10, 10, 6, [(1, 2), (2, 1), (2, 2), (2, 3)])
 
-print("\n>Partida de ejemplo Excel<")
-print("\nGeneracion Inical")
-
+print(f" \n>Partida de ejemplo Excel<\n \nGeneracion Inical")
 ejemplo.imprime_grid()
 
 for gen in range(ejemplo.generaciones()):
@@ -15,9 +13,7 @@ for gen in range(ejemplo.generaciones()):
 
 aleatorio = Generacion(15, 15, 10, [(4, 7), (5, 6), (5, 5), (4, 6), (1, 2), (2, 1), (2, 2), (2, 3)])
 
-print("\n>Partida aleatoria<")
-print("\nGeneracion Inical")
-
+print(f" \n>Partida Aleatoria<\n \nGeneracion Inical")
 aleatorio.imprime_grid()
 
 for gen in range(aleatorio.generaciones()):
