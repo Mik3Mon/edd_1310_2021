@@ -6,11 +6,11 @@ empleado = [e.replace('','').strip().split(',') for e in empleado]
 lista = len(empleado)
 empleados = Array(lista)
 
-for x in range(1,lista):
-    empleados.set_item(empleado[x],x)
+for x in range(1, lista):
+    empleados.set_item(empleado[x], x)
 
 print("SUELDOS DE EMPLEADOS")
-for x in range(1,lista):
+for x in range(1, lista):
     extra = float(276.5)
     hora_extra = int(empleados.get_item(x)[4])
     año_ingreso = int(empleados.get_item(x)[6])
@@ -21,11 +21,11 @@ for x in range(1,lista):
     print(f" N. empleado:{empleado[x][0]} Nombre:{empleado[x][1]} {empleado[x][2]} {empleado[x][3]} sueldo total de ${sueldo_total}")
 
 print("\nEMPLEADOS CON MAYOR ANTIGUEDAD")
-for x in range(1,lista):
+for x in range(1, lista):
     if int(empleados.get_item(x)[6]) == 2016:
         print(f" N. empleado:{empleado[x][0]} Nombre: {empleado[x][1]} {empleado[x][2]} {empleado[x][3]}, Año de ingreso:{empleado[x][6]}")
 
 print("\nEMPLEADOS CON MENOR ANTIGUEDAD")
-for x in range(1,lista):
+for x in range(1, lista):
     if int(empleados.get_item(x)[6]) == 2020:
         print(f" N. empleado:{empleado[x][0]} Nombre: {empleado[x][1]} {empleado[x][2]} {empleado[x][3]}, Año de ingreso:{empleado[x][6]}")
