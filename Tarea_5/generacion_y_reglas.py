@@ -61,10 +61,12 @@ class Generacion:
                         c = 0
                     if self.get_celula_viva(r, c):
                         vivos += 1
-                    if self.get_celula_viva(ren, col):
-                        vivos -= 1
         else:
             print("Coordenada de la celula fuera del grid")
+
+        if self.get_celula_viva(ren, col):
+            vivos -= 1
+
         return (vivos)
 
     def reglas_evolutivas(self):
