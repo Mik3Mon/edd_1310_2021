@@ -69,7 +69,7 @@ class Generacion:
         return (vivos)
 
     def reglas_evolutivas(self):
-        lista2 = []
+        lista = []
 
         for r in range( self.grid.get_num_rens()):
             lista_r = []
@@ -77,22 +77,22 @@ class Generacion:
             for c in range( self.grid.get_num_cols()):
                 lista_r.append(self.grid.get_item(r, c))
 
-            lista2.append(lista_r)
+            lista.append(lista_r)
 
         for ren in range(self.grid.get_num_rens()):
             for col in range(self.grid.get_num_cols()):
                 if self.get_celula_viva(ren, col) and (self.get_numero_vecinos_vivos(ren, col) == (2 or 3)):
-                    lista2[ren][col] = self.celula_viva
+                    lista[ren][col] = self.celula_viva
 
                 if self.get_celula_viva(ren, col) and (self.get_numero_vecinos_vivos(ren, col) <= 1):
-                    lista2[ren][col] = self.celula_muerta
+                    lista[ren][col] = self.celula_muerta
 
                 if self.get_celula_viva(ren, col) and (self.get_numero_vecinos_vivos(ren, col) >= 4):
-                    lista2[ren][col] = self.celula_muerta
+                    lista[ren][col] = self.celula_muerta
 
                 if self.get_celula_muerta(ren, col) and self.get_numero_vecinos_vivos(ren, col) == 3:
-                    lista2[ren][col] = self.celula_viva
+                    lista[ren][col] = self.celula_viva
 
-        for ren_nuevo in range(len(lista2)):
-            for col_nueva in range( len(lista2[ren_nuevo])):
-                self.grid.set_item( ren_nuevo, col_nueva, lista2[ren_nuevo][col_nueva])
+        for ren_nuevo in range(len(lista)):
+            for col_nueva in range( len(lista[ren_nuevo])):
+                self.grid.set_item( ren_nuevo, col_nueva, lista[ren_nuevo][col_nueva])
