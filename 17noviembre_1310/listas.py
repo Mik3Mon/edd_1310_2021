@@ -27,9 +27,34 @@ class LinkedList:
             curr_node = curr_node.siguiente
         print("")
 
+    def tail(self):
+        curr_node = self.__head
+        while curr_node.siguiente != None:
+            curr_node = curr_node.siguiente
+        return curr_node
+
     def remove(self , value):
         curr_node = self.__head
-        while curr_node.data != value and curr_node.siguiente != None:
-            curr_node = curr_node.siguiente
-        if curr_node.data == value:
-            
+        if self.__head.data == value:
+            self.__head = self.__head.siguiente
+        else:
+            anterior = None
+            while curr_node.data != value and curr_node.siguiente != None:
+                anterior = curr_node
+                curr_node = curr_node.siguiente
+            if curr_node.data == value:
+                anterior.siguiente = curr_node.siguiente
+            else:
+                print("El dato no existe en la lista")
+
+    def preppend(self , value):
+        nuevo = Nodo(value , self.__head)
+        self.__head = nuevo
+
+    def get(self , posicion = None): #Por defecto regresa el ultimo
+        contador = 0
+        if posicion == None:
+            dato = self.tail().data
+        else:
+            pass
+        return dato
