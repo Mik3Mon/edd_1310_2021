@@ -53,8 +53,13 @@ class LinkedList:
 
     def get(self , posicion = None): #Por defecto regresa el ultimo
         contador = 0
+        curr_node = self.__head
         if posicion == None:
             dato = self.tail().data
         else:
-            pass
+            while curr_node:
+                if posicion == contador:
+                    dato = curr_node.data
+                contador += 1
+                curr_node = curr_node.siguiente
         return dato
