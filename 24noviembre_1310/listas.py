@@ -46,7 +46,6 @@ class DoubleLinkedList:
         if self.__tail.data == value:
             self.__head = self.__head.next
             self.__head.prev = None
-
         while curr_node.data != value and curr_node != None:
             curr_node = curr_node.next
         if curr_node.data == value:
