@@ -16,14 +16,15 @@ class DoubleLinkedList:
         return self.__size
 
     def is_empty(self):
-        return self.__head.data == None and self.__tail.data == None
+        return self.__size == 0
 
     def append(self , value):
-        self.__size += 1
         nuevo = NodoDoble(value)
         curr_node = self.__head
+        self.__size += 1
         if self.is_empty():
-            self.__head = self.__tail = nuevo
+            self.__head = nuevo
+            self.__tail = nuevo
         else:
             while curr_node.siguiente != None:
                 curr_node = curr_node.siguiente
