@@ -66,7 +66,8 @@ class CircularList:
 
     def remove(self , value = None):
         curr_node = self.__referencia
-        if value != curr_node.data:
+        curr_node2 = self.__head
+        if value != curr_node.data and value != curr_node2.data:
             print(f" >El elemento {value} no existe<\n")
         else:
             curr_ref = self.__referencia

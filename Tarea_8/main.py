@@ -1,9 +1,13 @@
 from Listas_Circulares import CircularList
 
 CL = CircularList()
+print(" PREGUNTAMOS SI LA LISTA ESTA VACIA\n")
+
 print(f"cl esta vacia? {CL.is_empty()}\n")
 CL.insert(10)
-print(f"cl esta vacia? {CL.is_empty()}\n")
+print(f"cl esta vacia? {CL.is_empty()}")
+
+print(" \nPROBAMOS METODOS INSERT, SIZE Y TRANSVERSAL\n")
 CL.insert(20)
 CL.insert(11)
 CL.insert(21)
@@ -23,8 +27,15 @@ CL.get_size()
 CL.insert(-10)
 CL.transversal()
 CL.get_size()
+
+print(" \nPROBAMOS METODO REMOVE\n")
 CL.remove(100)
 CL.transversal()
 CL.get_size()
 CL.remove(100)
 CL.remove(200)
+CL.transversal()
+CL.get_size()
+CL.remove(-10)
+CL.transversal()
+CL.get_size()
