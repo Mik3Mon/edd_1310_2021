@@ -41,10 +41,9 @@ class LaberintoADT:
     def buscar_entrada(self):
         encontrado = False
         for renglon in range(self.__laberinto.get_num_rows()):
-            for columno in range(self.__laberinto.get_num_cols()):
-                tope = self.__camino.peek()
+            for columna in range (self.__laberinto.get_num_cols()):
                 if self.__laberinto.get_item(renglon, columna) == 'E':
-                    self.__camino.push(tuple(renglon, columna))
+                    self.__camino.push(tuple(renglon , columna))
                     encontrado = True
         return encontrado
 
@@ -56,3 +55,4 @@ class LaberintoADT:
 
     def resolver_laberinto(self):
         #Aplicar reglas
+        pass
