@@ -21,7 +21,7 @@ class Stack:
         return self.__data[len(self.__data) - 1]
 
     def to_string(self):
-        print(" -----")
+        print(" --------")
         for item in self.__data[::-1]:
-            print(f" | {item} | ")
-            print(" -----")
+            print(f" |{item}|")
+            print(" --------")

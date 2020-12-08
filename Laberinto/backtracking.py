@@ -43,7 +43,7 @@ class LaberintoADT:
         for renglon in range(self.__laberinto.get_num_rows()):
             for columna in range (self.__laberinto.get_num_cols()):
                 if self.__laberinto.get_item(renglon, columna) == 'E':
-                    self.__camino.push(tuple(renglon , columna))
+                    self.__camino.push((renglon , columna))
                     encontrado = True
         return encontrado
 
@@ -53,6 +53,36 @@ class LaberintoADT:
     def get_previa(self):
         return self.__previa
 
+    def imprimir_camino(self):
+        self.__camino.to_string()
+
+    def get_pos_actual(self):
+        return self.__camino.peek()
+
     def resolver_laberinto(self):
-        #Aplicar reglas
-        pass
+        actual = self.__camino.peek()
+        #Buscar a la izquierda
+        #Agregar validaciones para los limites del laberinto
+        if actual[1]-1 != -1 \
+         and self.__laberinto.get_item(actual[0], actual[1]-1) == '0' \
+          and self.get_previa() != (actual[0], actual[1]-1) \
+           and self.__laberinto.get_item(actual[0], actual[1]-1) != 'X':
+            self.set_previa(actual)
+            self.__camino.push((actual[0], actual[1]-1))
+        #Buscar arriba
+        elif actual[0]-1 != -1 \
+         and self.__laberinto.get_item(actual[0]-1, actual[1]) == '0' \
+          and self.get_previa() != (actual[0]-1, actual[1]) \
+           and self.__laberinto.get_item(actual[0]-1, actual[1]) != 'X':
+            self.set_previa(actual)
+            self.__camino.push((actual[0]-1, actual[1]))
+        #Buscar a la derecha
+        elif 1 == 0:
+            pass
+        #Buscar abajo
+        elif 1 ==0:
+            pass
+        else:
+            self.__laberinto.set_item(actual[0], actual[1] , 'X')
+            self.__previa = actual
+            self.__camino.pop()
