@@ -50,5 +50,8 @@ while cpa.is_empty() != True:
     siguiente = cpa.dequeue()
     print(f"\nLa tripulacion con prioridad { siguiente['prioridad'] }, han abandonado el barco\n")
     cpa.to_string()
-
-print("El barco ha sido evacuado por completo")
+    if cpa.is_empty() == False:
+        print("Aun quedan personas en la cola")
+    else:
+        print("Ya no quedan personas en la cola")
+        print("El barco ha sido evacuado por completo!")
