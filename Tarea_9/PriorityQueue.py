@@ -1,4 +1,4 @@
-class Queue:
+class PriorityQueue:
     def __init__(self):
         self.__data = list()
 
@@ -8,14 +8,18 @@ class Queue:
     def length(self):
         return len(self.__data)
 
-    def enqueue(self , elem):
-        self.__data.append(elem)
+    def enqueue(self , prioridad , elem):
+        self.__data.append((prioridad, elem))
+        for x in range(self.length()):
+            posicion = x
+            actual = self.__data[x]
+            while posicion > 0 and self.__data[posicion-1][0] > actual[0]:
+                self.__data[posicion] = self.__data[posicion-1]
+                posicion-=1
+            self.__data[posicion] = actual
 
     def dequeue(self):
-        if not self.is_empty():
-            return self.__data.pop(0)
-        else:
-            return None
+        return self.__data.pop(0)
 
     def to_string(self):
         cadena = ""
