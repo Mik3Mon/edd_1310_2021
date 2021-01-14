@@ -10,3 +10,6 @@ def countdown(n):
         countdown(n-1)
     else:
         print("BOOOOOOOM!")
+
+def adt_stack(Stack):
+    return
