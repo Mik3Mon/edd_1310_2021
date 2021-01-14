@@ -7,7 +7,7 @@ res = suma_lista_rec(datos)
 print(res)
 
 print("\nPrueba Cuentaregresiva")
-countdown(20)
+countdown(60)
 
 print("\nPrueba ADT Stack")
 s = Stack()
