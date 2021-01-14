@@ -14,4 +14,18 @@ def countdown(n):
         print("BOOOOOOOM!")
 
 def eliminar_pila(pila):
+    tamanio = pila.length()
+    contador =+ 1
+    if (pila.is_empty() == True or pila.length() <= 2):
+        return "La pila esta vacia o no tiene suficientes elementos"
+    copia = pila.peek()
+    pila.pop()
+    eliminar_pila(pila)
+    mitad = (tamanio/2)
+    if mitad == int(mitad):
+        if (contador != mitad and contador != (mitad-1)):
+            pila.push(copia)
+    else:
+        if (contador != int(tamanio/2)):
+            pila.push(copia)
     
