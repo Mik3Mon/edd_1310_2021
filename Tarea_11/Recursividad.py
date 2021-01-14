@@ -5,7 +5,7 @@ def suma_lista_rec(lista):
         return lista.pop() + suma_lista_rec(lista)
 
 def countdown(n):
-    if n > 0:
+    if n >= 0:
         print(f"La bomba explotara en {n} segundos")
         countdown(n-1)
     else:
