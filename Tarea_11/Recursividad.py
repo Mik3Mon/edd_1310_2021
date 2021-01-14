@@ -12,3 +12,6 @@ def countdown(n):
         countdown(n-1)
     else:
         print("BOOOOOOOM!")
+
+def eliminar_pila(pila):
+    
