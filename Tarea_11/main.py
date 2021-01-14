@@ -1,4 +1,4 @@
-from Recursividad import suma_lista_rec,countdown,adt_stack
+from Recursividad import suma_lista_rec,countdown,eliminar
 from Stack import Stack
 
 print("Prueba suma lista recursiva")
@@ -7,7 +7,7 @@ res = suma_lista_rec(datos)
 print(res)
 
 print("\nPrueba Cuentaregresiva")
-countdown(60)
+countdown(20)
 
 print("\nPrueba ADT Stack")
 s = Stack()
@@ -17,4 +17,7 @@ s.push(30)
 s.push(120)
 s.push(230)
 s.push(10)
+print("\nCaso Base")
+s.to_string()
+print("\nCaso despues de la funcion")
 s.to_string()

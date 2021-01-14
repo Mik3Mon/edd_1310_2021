@@ -1,3 +1,5 @@
+from Stack import Stack
+
 def suma_lista_rec(lista):
     if len(lista) == 1:
         return lista[0]
@@ -10,6 +12,3 @@ def countdown(n):
         countdown(n-1)
     else:
         print("BOOOOOOOM!")
-
-def adt_stack(Stack):
-    return
