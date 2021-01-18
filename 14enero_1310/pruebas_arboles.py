@@ -1,7 +1,7 @@
 class NodoArbol:
     def __init__(self , value , left = None , rigth = None):
         self.data = value
-        self.rigth = rigth
+        self.right = right
         self.left = left
 
 arbol = NodoArbol("R" , NodoArbol("C") , NodoArbol("H"))
