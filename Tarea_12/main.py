@@ -1,0 +1,27 @@
+from Arboles import NodoArbol
+
+print("Descripcion de los recorridos")
+print("Infija: En este recorrido se visita primero la hoja izquierda luego")
+print("la raiz y luego la hoja derecha; este proceso se hace recursivamente con los subarboles")
+print("Prefija: En este recorrido se visita primero la raiz luego la hoja")
+print("izquierda y luego la hoja derecha; este proceso se hace recursivamente con los subarboles")
+print("Posfija: En este recorrido se visita primero la hoja izquierda luego")
+print("la hoja derecha y luego la raiz; este proceso se hace recursivamente con los subarboles")
+
+arbol1 = NodoArbol("+" , NodoArbol("-" , NodoArbol(5) , NodoArbol(4)) , NodoArbol("*" , NodoArbol(3) , NodoArbol(2)))
+print("\nArbol 1")
+print("Infija")
+print(f"{arbol1.left.left.data} {arbol1.left.data} {arbol1.left.right.data} {arbol1.data} {arbol1.right.left.data} {arbol1.right.data} {arbol1.right.right.data}")
+print("\nPrefija")
+print(f"{arbol1.data} {arbol1.left.data} {arbol1.left.left.data} {arbol1.left.right.data} {arbol1.right.data} {arbol1.right.left.data} {arbol1.right.right.data}")
+print("\nPosfija")
+print(f"{arbol1.left.left.data} {arbol1.left.right.data} {arbol1.left.data} {arbol1.right.left.data} {arbol1.right.right.data} {arbol1.right.data} {arbol1.data}")
+
+arbol2 = NodoArbol(40 , NodoArbol(30 , NodoArbol(25) , NodoArbol(35)) , NodoArbol(50 , NodoArbol(45) , NodoArbol(60)))
+print("\nArbol 2")
+print("Infija")
+print(f"{arbol2.left.left.data} {arbol2.left.data} {arbol2.left.right.data} {arbol2.data} {arbol2.right.left.data} {arbol2.right.data} {arbol2.right.right.data}")
+print("\nPrefija")
+print(f"{arbol2.data} {arbol2.left.data} {arbol2.left.left.data} {arbol2.left.right.data} {arbol2.right.data} {arbol2.right.left.data} {arbol2.right.right.data}")
+print("\nPosfija")
+print(f"{arbol2.left.left.data} {arbol2.left.right.data} {arbol2.left.data} {arbol2.right.left.data} {arbol2.right.right.data} {arbol2.right.data} {arbol2.data}")
