@@ -1,5 +1,5 @@
 class NodoArbol:
-    def __init__(self , value , left = None , rigth = None):
+    def __init__(self , value , left = None , right = None):
         self.data = value
         self.right = right
         self.left = left
