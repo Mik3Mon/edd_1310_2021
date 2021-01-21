@@ -10,3 +10,11 @@ abb.insert(89)
 abb.transversal("inorden")
 abb.transversal("preorden")
 abb.transversal("posorden")
+
+print("")
+
+res = abb.search(35)
+print(f"\nEl resultado es: {res}")
+
+abb.remove(35)
+abb.transversal()
